@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="Medixfora"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+
+        <View
+            android:id="@+id/txt_appname_underline"
+            android:layout_below="@+id/txt_appname"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/txt_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_appname_underline"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Message goes here ............."
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_main"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:text="OK"
+                android:textColor="@color/button_color"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/healthtips_outer_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:paddingBottom="0dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/rounded_corner_white_border"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/healthtips_inner_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        >
+
+
+
+
+        <LinearLayout
+            android:id="@+id/healthtips_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="0dp"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/healthtips_imageViewIcon"
+                android:layout_width="119dp"
+                android:layout_height="68dp"
+                android:src="@drawable/healthtips"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                >
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/healthtips_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Vitamins for Good Eyesig… Help Nourish Your Eyes"
+                    android:layout_centerVertical="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/healthtips_details"
+            >
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/healthtips_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="1dp"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:text="Vitamins for Good Eyesig… Help Nourish Your Eyes. Vitamins for Good Eyesig… Help Nourish Your Eyes. Vitamins for Good Eyesig… Help Nourish Your Eyes. Vitamins for Good Eyesig… Help Nourish Your Eyes"
+                android:layout_centerVertical="true"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--<View
+        android:id="@+id/healtips_listdivider"
+        android:layout_below="@+id/healthtips_inner_menu"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginTop="5dp"
+        android:background="#bcbcbc"/>-->
+
+</RelativeLayout>

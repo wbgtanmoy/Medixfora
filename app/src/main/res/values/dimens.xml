@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="textview_height">25dp</dimen>
+    <dimen name="textview_width">150dp</dimen>
+    <dimen name="ball_radius">30dp</dimen>
+
+
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_25">25sp</dimen>
+    <dimen name="font_size_30">30sp</dimen>
+
+    <dimen name="font_size_edittxt">14sp</dimen>
+    <dimen name="font_buttontxt">16sp</dimen>
+    <dimen name="font_topheader">32sp</dimen>
+
+    <dimen name="login_margin">40dp</dimen>
+    <dimen name="common_margin1">20dp</dimen>
+    <dimen name="register_margin">30dp</dimen>
+
+    <dimen name="nav_drawer_width">285dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dasboard_icon1">100dp</dimen>
+    <dimen name="dasboard_icon2">78dp</dimen>
+
+    <dimen name="week_days_text_size">14dp</dimen>
+    <dimen name="week_dates_text_size">21dp</dimen>
+
+
+</resources>

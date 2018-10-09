@@ -1,0 +1,171 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.brandhype.medixfora.fragments.DashboardFragmentDoctor">
+
+    <ScrollView
+        android:id="@+id/dash_main_scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="10dp"
+        android:background="#00ffffff"
+        >
+
+        <RelativeLayout
+            android:id="@+id/docdash_main1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="15dp"
+            >
+
+            <!-- row 1 -->
+            <LinearLayout
+                android:id="@+id/doc_dash_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <LinearLayout
+                    android:id="@+id/dash_row1_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/doc_dash_row1_img_l"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/schedule"
+                        />
+
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/dash_row1_txt_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Schedule"
+                        android:textColor="@color/dashboard_font"
+                        android:textSize="@dimen/font_size_14"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dash_row1_right"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/doc_dash_row1_img_2"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/appointment"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/dash_row1_txt_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Appointment"
+                        android:textColor="@color/dashboard_font"
+                        android:textSize="@dimen/font_size_14"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- row 2 -->
+            <LinearLayout
+                android:id="@+id/dash_row2"
+                android:layout_below="@+id/doc_dash_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <LinearLayout
+                    android:id="@+id/dash_row2_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/doc_dash_row2_img_l"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/profile"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/dash_row2_txt_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textColor="@color/dashboard_font"
+                        android:textSize="@dimen/font_size_14"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dash_row2_right"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/doc_dash_row2_img_2"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/settings_doc"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/dash_row2_txt_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textColor="@color/dashboard_font"
+                        android:textSize="@dimen/font_size_14"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

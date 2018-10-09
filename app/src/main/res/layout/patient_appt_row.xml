@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/patientappt_outer_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingBottom="0dp"
+    android:background="@drawable/rounded_corner_white_border"
+    >
+
+    <LinearLayout
+        android:id="@+id/patientappt_docrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <com.brandhype.medixfora.customviews.CircleImageView
+            android:id="@+id/patientappt_docimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/no_image_cart"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="0dp"
+            app:border_width="0dp"
+            app:border_color="#bcbcbc"
+            android:layout_marginLeft="5dp"
+            android:background="@color/transparent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/patientappt_inner_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/patientappt_docimage"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="2dp"
+            android:layout_centerVertical="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/patientappt_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                >
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/patientappt_docname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Mr Avik Dey"
+                    android:layout_centerVertical="true"
+                    />
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/patientappt_docdesig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="MBBS,MD"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/patientappt_docfees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="normal"
+                    android:textColor="@color/fees_color"
+                    android:text="555/-"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/patientappt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="25 Sept 2017 at 6:00 PM"
+                    android:layout_centerVertical="true"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/patientappt_listdivider"
+        android:layout_below="@+id/patientappt_docrow"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginTop="5dp"
+        android:background="#bcbcbc"/>
+
+</RelativeLayout>

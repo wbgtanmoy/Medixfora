@@ -1,0 +1,746 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    tools:context="com.brandhype.medixfora.fragments.DoctorscheduleFragment">
+
+    <ScrollView
+        android:id="@+id/docschedule_main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="0dp"
+        android:background="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/docschedule_main_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/docschedule_cal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/calender_sch"
+                android:padding="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+            <!-- heaading -->
+            <LinearLayout
+                android:id="@+id/docschedule_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                >
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/docschedule_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:text="Create Schedule"
+                    android:textColor="@color/button_color"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="visible"
+                    />
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="Please set your appointment schedule in the following table."
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:visibility="visible"
+                    android:gravity="left"
+                    />
+
+            </LinearLayout>
+
+            <!-- schedule header -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_days_heading"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Day"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_14"
+                    android:background="@drawable/rectangle_white_border"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    />
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_heading"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Schedule Time"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_14"
+                    android:background="@drawable/rectangle_white_border"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    />
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_patientcount_heading"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No. Of Patient"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_14"
+                    android:background="@drawable/rectangle_white_border"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    />
+
+                <!-- <ImageView
+                     android:id="@+id/doc_schedule_edit"
+                     android:layout_width="0dp"
+                     android:layout_weight=".10"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/edit_docschedule"
+                     android:gravity="right"
+                      />
+                 -->
+
+            </LinearLayout>
+
+            <!-- schedule row1 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#d9f3f3"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/mon"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="-- --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_1"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_1"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_green"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row2 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#f1f1f1"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tue"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    android:id="@+id/docschedule_starttime_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.40"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="normal"
+                    app:myfont="OpenSans_Regular.ttf" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_2"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_2"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_gray"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row3 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#d9f3f3"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/wed"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_3"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_3"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_3"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_green"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row4 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#f1f1f1"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/thu"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_4"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_4"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_4"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_gray"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row5 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#d9f3f3"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/fri"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_5"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        android:id="@+id/docschedule_patientcount_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_5"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_green"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row3 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#f1f1f1"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sat"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_6"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_6"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_6"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_gray"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- schedule row3 -->
+            <LinearLayout
+                android:id="@+id/docschedule_row_7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#d9f3f3"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="50dp"
+                    android:background="@drawable/table_left_gray_border"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/docschedule_days_7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sun"
+                        android:padding="0dp"
+                        android:layout_marginLeft="0dp"
+                        />
+                </LinearLayout>
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/docschedule_starttime_7"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="--  --"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/table_mid_gray_border"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_right_gray_border"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/docschedule_patientcount_7"
+                        android:layout_width="0dp"
+                        android:layout_weight=".60"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@color/transparent"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/doc_schedule_edit_7"
+                        android:layout_width="0dp"
+                        android:layout_weight=".40"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_green"
+                        android:padding="8dp"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

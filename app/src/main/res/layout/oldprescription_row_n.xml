@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pharmacy_outer_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:id="@+id/pharmacy_inner_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_margin="0dp"
+        >
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/prescr_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/prescr_buttons"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="normal"
+            android:textColor="@color/dashboard_font"
+            android:text="Prescription Title. Prescription Title. Prescription Title."
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/prescr_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            >
+            <ImageView
+                android:id="@+id/presc_download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pres_download"
+                android:padding="1dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/presc_remove"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pres_delete"
+                android:padding="1dp"
+                android:layout_marginRight="8dp"
+                />
+
+        </LinearLayout>
+
+
+       <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bcbcbc"
+            android:layout_below="@+id/prescr_title"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

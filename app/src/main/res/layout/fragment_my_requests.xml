@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.brandhype.medixfora.fragments.MyRequestsFragment">
+
+    <LinearLayout
+        android:id="@+id/myrequest_reply_head_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        >
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            android:id="@+id/myrequest_reply_head"
+            app:myfont="OpenSans_Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="YOUR REQUESTS FOR CARE-AT-HOME"
+            android:textColor="@color/dashboard_font"
+            android:textSize="@dimen/font_size_14"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+        <!--<com.codopoliz.medixfora.customviews.CustomTextView
+            android:id="@+id/myrequest_reply_txt"
+            app:myfont="OpenSans_Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="** Please note that once read, the queries \n will be removed from the system."
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:gravity="center"
+            android:textStyle="bold"
+            />-->
+
+        <View
+            android:id="@+id/myrequest_reply_line"
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myrequest_List"
+        android:layout_below="@+id/myrequest_reply_head_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/norecordfound_myrequest"
+        android:layout_below="@id/myrequest_List"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/norecordfound"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

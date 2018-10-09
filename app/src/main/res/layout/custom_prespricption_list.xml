@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    >
+    <!-- serach on listview , to work with -->
+    <LinearLayout
+        android:id="@+id/presc_search_view_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey2"
+        android:visibility="gone"
+        >
+        <com.brandhype.medixfora.customviews.CustomEditText
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/presc_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_search"
+            android:drawableRight="@drawable/search"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:hint="Search"
+            android:paddingRight="15dp"
+            />
+
+
+    </LinearLayout>
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@id/presc_search_view_lay"
+        android:id="@+id/oldPrescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+    </ListView>
+</RelativeLayout>

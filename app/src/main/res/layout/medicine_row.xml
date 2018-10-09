@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/medicine_outer_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    android:background="@color/white"
+    >
+
+
+    <com.brandhype.medixfora.customviews.CircleImageView
+        android:id="@+id/medicine_imageViewIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/medicine_blank"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:layout_centerVertical="true"
+        app:border_width="1dp"
+        app:border_color="@color/light_grey"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/medicine_inner_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medicine_imageViewIcon"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="2dp"
+
+        >
+
+        <LinearLayout
+              android:id="@+id/medicine_details"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_alignParentLeft="true"
+              android:layout_toLeftOf="@+id/medicine_button"
+              android:paddingBottom="0dp"
+              android:paddingLeft="5dp"
+              >
+
+              <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Bold.ttf"
+                android:id="@+id/medicine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textSize="@dimen/font_size_14"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:text="Astral 150. Astral 150."
+                android:layout_centerVertical="true"
+                />
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  >
+                  <com.brandhype.medixfora.customviews.CustomTextView
+                      app:myfont="OpenSans_Regular.ttf"
+                      android:id="@+id/medicine_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="5dp"
+                      android:paddingTop="3dp"
+                      android:paddingBottom="1dp"
+                      android:textSize="@dimen/font_size_14"
+                      android:textStyle="normal"
+                      android:textColor="@color/black"
+                      android:text="Rs 432/-"
+                      android:layout_centerVertical="true"
+                      />
+
+
+                  <com.brandhype.medixfora.customviews.CustomTextView
+                      app:myfont="OpenSans_Bold.ttf"
+                      android:id="@+id/medicine_offer_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="20dp"
+                      android:paddingTop="3dp"
+                      android:paddingBottom="1dp"
+                      android:textSize="@dimen/font_size_14"
+                      android:textStyle="normal"
+                      android:textColor="@color/black"
+                      android:text="N/A"
+                      android:layout_centerVertical="true"
+                      />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  >
+                  <com.brandhype.medixfora.customviews.CustomTextView
+                      app:myfont="OpenSans_Regular.ttf"
+                      android:id="@+id/medicine_company_name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="5dp"
+                      android:paddingTop="1dp"
+                      android:paddingBottom="1dp"
+                      android:textSize="@dimen/font_size_14"
+                      android:textStyle="normal"
+                      android:textColor="@color/black"
+                      android:text="Medical Equipment"
+                      android:layout_centerVertical="true"
+                      />
+
+                  <TextView
+                      android:id="@+id/medicine_desc"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="5dp"
+                      android:paddingTop="5dp"
+                      android:paddingBottom="1dp"
+                      android:textSize="@dimen/font_size_12"
+                      android:textStyle="normal"
+                      android:textColor="@color/black"
+                      android:text="Here short description of medicine will be shown"
+                      android:layout_centerVertical="true"
+                      />
+              </LinearLayout>
+
+
+
+
+          </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/medicine_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            >
+
+            <com.brandhype.medixfora.customviews.CustomButton
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/medicine_book_button"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="0dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/rounded_corner_cyan_button"
+                android:text="Add To Cart"
+                android:textStyle="normal"
+                android:textSize="@dimen/font_size_14"
+                android:textAllCaps="false"
+                />
+
+            <com.brandhype.medixfora.customviews.CustomButton
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/medicine_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:padding="0dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/rounded_corner_cyan_button"
+                android:text="View More"
+                android:textStyle="normal"
+                android:textSize="@dimen/font_size_14"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/medicine_listdivider"
+        android:layout_below="@+id/medicine_inner_menu"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginTop="10dp"
+        android:background="#bcbcbc"/>
+
+</RelativeLayout>

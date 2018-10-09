@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brandhype.medixfora.fragments.HealthtipsFragment"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/frame_healthtips_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        >
+        <ImageView
+            android:id="@+id/healthtips_top_img2"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/health_tips_banner"
+            />
+        <View
+            android:id="@+id/healthtips_top_img2_line"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimaryDark"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/frame_healthtips_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_healthtips_top"
+        android:paddingBottom="10dp"
+        android:background="#bcbcbc"
+        >
+        <LinearLayout
+            android:id="@+id/frame_healthtips_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="0dp"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            >
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/healthtips_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frequent Queries/Health Tips "
+                android:textColor="@color/dashboard_font"
+                android:textSize="@dimen/font_size_14"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/healthtips_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/norecordfound_healthtips"
+                android:layout_below="@+id/healthtips_List"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/norecordfound"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_askquery"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:visibility="visible"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="right|bottom"
+        app:layout_anchor="@id/frame_healthtips_bottom_ll"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/chat_white"
+        android:layout_alignBottom="@+id/frame_healthtips_bottom_ll"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
+

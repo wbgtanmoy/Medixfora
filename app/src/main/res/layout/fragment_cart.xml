@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brandhype.medixfora.fragments.CartFragment"
+    android:background="@color/grey3"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/cartbottom_lay"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/norecordfound_cart"
+        android:layout_alignParentTop="true"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:src="@drawable/empty_cart2"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:id="@+id/cartbottom_lay"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:visibility="visible"
+        >
+        <com.brandhype.medixfora.customviews.CustomButton
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/cart_checkout_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:textColor="#ffffff"
+            android:background="@color/button_color"
+            android:text="CHECKOUT"
+            android:textStyle="normal"
+            android:textSize="@dimen/font_size_14"
+            android:textAllCaps="false"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brandhype.medixfora.fragments.HealthtipsFragment"
+    android:background="#ffffff">
+
+
+    <com.brandhype.medixfora.customviews.CustomTextView
+        app:myfont="OpenSans_Regular.ttf"
+        android:id="@+id/healthtips_caption_txt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Send Query"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:textSize="@dimen/font_size_14"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/healthtips_bottom"
+        android:layout_below="@+id/healthtips_caption_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        >
+
+
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/healthtips_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type your query in the box below. Please keep within 20 words."
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/healthtips_main_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/healthtips_caption"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/healthtips_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/healthtips_message_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_corner_search"
+                    android:gravity="left|top"
+                    android:hint="Type your query here"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:lines="5"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/edittext_hint"
+                    android:textSize="@dimen/font_size_14"
+                    android:textCursorDrawable="@null"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/healthtips_row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <com.brandhype.medixfora.customviews.CustomButton
+                    android:id="@+id/healthtips_submit_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="normal"
+                    app:myfont="OpenSans_Regular.ttf" />
+
+                <com.brandhype.medixfora.customviews.CustomButton
+                    android:id="@+id/healthtips_cancel_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="normal"
+                    app:myfont="OpenSans_Regular.ttf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

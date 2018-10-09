@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#bcbcbc"
+    tools:context="com.brandhype.medixfora.fragments.AboutusFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_aboutus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/scroll_aboutus_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_white_border"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="20dp"
+            >
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/about_us_title"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="20dp"
+                android:text="About Us"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/about_us"
+                android:layout_centerInParent="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="We are a mutimillion workforce in medical industry." />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

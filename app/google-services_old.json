@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "466213818248",
+    "firebase_url": "https://medixfora-305c1.firebaseio.com",
+    "project_id": "medixfora-305c1",
+    "storage_bucket": "medixfora-305c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466213818248:android:a9f8ef2b4f9068e3",
+        "android_client_info": {
+          "package_name": "com.codopoliz.medixfora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466213818248-42pt6re0ucrl2g0spdjr2tpek6rkop86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQlVGr1S_xOg9WAvNwo4lrgktYxV8bsdw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

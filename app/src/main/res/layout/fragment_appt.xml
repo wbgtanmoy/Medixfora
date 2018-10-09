@@ -1,0 +1,502 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brandhype.medixfora.fragments.ApptFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_calender"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:background="#fcfcfc"
+        >
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left_arrow_cal"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_corner_cyan_button"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--ROW 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SUN"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MON"
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TUE"
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="WED"
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="THU"
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="FRI"
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/week_days_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SAT"
+                    android:textSize="@dimen/week_days_text_size"
+
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <!--ROW 2-->
+            <LinearLayout
+                android:id="@+id/llweekdates"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:paddingBottom="0dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_sun"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_date_on_sun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_sun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_sun"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_mon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_mon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_mon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_mon"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_tue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_tue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_tue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_tue"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_wed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_wed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_wed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_wed"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_thu"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_fri"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_fri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textSize="@dimen/week_dates_text_size" />
+                    <TextView
+                        android:id="@+id/tv_month_on_fri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_fri"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_date_on_sat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/date_bg_circle"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_date_on_sat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textSize="@dimen/week_dates_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_month_on_sat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Jan"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/event_circle_sat"
+                        android:visibility="gone"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/event_circle"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nxt"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_arrow_cal"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_corner_cyan_button"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/appt_botlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_calender"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal"
+            android:textColor="@color/button_color"
+            android:text="--Selected Date--"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/inner_appt_botlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewIconClock"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/watch"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_timing"
+                android:layout_below="@+id/imageViewIconClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="@dimen/font_size_14"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/imageViewIcon"
+                android:text="Timing:StartTime-EndTime"
+                android:layout_centerVertical="true"
+                />
+
+            <com.brandhype.medixfora.customviews.CustomButton
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/doctor_book_nxt1"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_timing"
+                android:layout_marginTop="15dp"
+                android:padding="0dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/rounded_corner_cyan_button"
+                android:text="Next"
+                android:textStyle="normal"
+                android:textSize="@dimen/font_size_14"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_slotid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/tv_date_actdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/tv_starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

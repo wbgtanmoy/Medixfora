@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brandhype.medixfora.SignupActivity"
+    android:background="@color/colorPrimaryDark"
+    >
+
+    <FrameLayout
+        android:id="@+id/frame_sign_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+         <ImageView
+            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:id="@+id/top_img2"
+            android:src="@drawable/top_img2"
+            android:scaleType="fitXY"
+            android:layout_gravity="top"
+            />
+
+        <!--<ImageView
+            android:layout_height="60dp"
+            android:layout_width="200dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/top_img_logo"
+            android:src="@drawable/logo_medix1"
+            android:layout_gravity="top|center_horizontal"
+            />-->
+
+    </FrameLayout>
+
+    <!--<com.codopoliz.medixfora.customviews.CustomTextView
+        app:myfont="OpenSans_Bold.ttf"
+        android:id="@+id/signu_label"
+        android:layout_below="@+id/frame_sign_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_30"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true" />-->
+
+    <ScrollView
+        android:id="@+id/signu_main_scroll1"
+        android:layout_below="@+id/frame_sign_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="10dp"
+        android:background="#00ffffff"
+        >
+
+        <RelativeLayout
+            android:id="@+id/signu_main1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="15dp"
+            >
+
+
+            <RelativeLayout
+            android:id="@+id/signu_main1_inn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/register_margin"
+            android:layout_marginRight="@dimen/register_margin"
+            android:layout_marginTop="30dp"
+            android:padding="15dp"
+            android:background="@drawable/rounded_corner_white_border"
+            >
+
+                    <!--<EditText
+                    android:id="@+id/signu_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:hint="Name"
+                    android:inputType="textCapWords"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#bbbbbb"
+                    android:textSize="@dimen/font_size_edittxt"
+                    android:background="@android:color/white"
+                    />-->
+
+                <!-- Doctor Or Patient -->
+                <RelativeLayout
+                    android:id="@+id/signu_docpay_lay"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@color/transparent"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/docpayRadioGroup"
+                        android:background="@color/transparent"
+                        android:checkedButton="@+id/docpay_doctor"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/docpay_patient"
+                            android:text="Patient"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/black"
+                            android:button="@drawable/custom_radio_button"
+                            android:padding="7dp"
+                            android:checked="true"
+                            android:layout_marginLeft="10dp"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/docpay_doctor"
+                            android:text="Doctor"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/black"
+                            android:button="@drawable/custom_radio_button"
+                            android:padding="7dp"
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <!-- name -->
+                <RelativeLayout
+                    android:id="@+id/signu_username_lay"
+                    android:layout_below="@+id/signu_docpay_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/signu_txt_image"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="5dp"
+                        android:src="@drawable/name"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/signu_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/signu_txt_image"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Firstname Lastname"
+                        android:inputType="textCapWords"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+
+
+                <!-- email -->
+                <RelativeLayout
+                    android:id="@+id/signu_email_lay"
+                    android:layout_below="@+id/signu_username_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/signu_eml_image"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="5dp"
+                        android:src="@drawable/email"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/signu_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/signu_eml_image"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+                    <!--<EditText
+                    android:id="@+id/signu_email"
+                    android:layout_below="@+id/signu_username_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#bbbbbb"
+                    android:textSize="@dimen/font_size_edittxt"
+                    android:background="@android:color/white"
+                    />-->
+
+                <!-- pass -->
+                <RelativeLayout
+                    android:id="@+id/signu_pass_lay"
+                    android:layout_below="@+id/signu_email_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/signu_pass_image"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="5dp"
+                        android:src="@drawable/pass_icon"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/signu_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/signu_pass_image"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+                    <!--<EditText
+                    android:id="@+id/signu_pass"
+                    android:layout_below="@+id/signu_email_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#bbbbbb"
+                    android:textSize="@dimen/font_size_edittxt"
+                    android:background="@android:color/white"
+                    />-->
+
+
+                <!-- conf pass -->
+                <RelativeLayout
+                    android:id="@+id/signu_cpass_lay"
+                    android:layout_below="@+id/signu_pass_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/signu_cpass_image"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="5dp"
+                        android:src="@drawable/pass_icon"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/signu_confpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/signu_cpass_image"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+                    <!--<EditText
+                    android:id="@+id/signu_confpass"
+                    android:layout_below="@+id/signu_pass_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Retype Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#bbbbbb"
+                    android:textSize="@dimen/font_size_edittxt"
+                    android:background="@android:color/white"
+                    />
+                    -->
+
+
+                <!-- contact -->
+                <RelativeLayout
+                    android:id="@+id/signu_contact_lay"
+                    android:layout_below="@+id/signu_cpass_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/signu_contact_image"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="5dp"
+                        android:src="@drawable/phone"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/signu_contact_image"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+
+                        <EditText
+                            android:id="@+id/signu_contact_stdcode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".20"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:hint="+91"
+                            android:text="+91"
+                            android:inputType="phone"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="0dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/edittext_hint"
+                            android:textSize="@dimen/font_size_edittxt"
+                            android:background="@drawable/line_black"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".05"
+                            android:background="#00000000"
+                            />
+
+                        <com.brandhype.medixfora.customviews.CustomEditText
+                            app:myfont="OpenSans_Regular.ttf"
+                            android:id="@+id/signu_contact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:hint="*Contact"
+                            android:inputType="phone"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="0dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/edittext_hint"
+                            android:textSize="@dimen/font_size_edittxt"
+                            android:background="@drawable/line_black"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/bottom_signu_button_text3"
+                    android:layout_below="@+id/signu_contact_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Plese input a valid contact no. An OTP will be sent to that number for verification in next step."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font_size_12"
+                    android:clickable="true"
+                    />
+
+                    <com.brandhype.medixfora.customviews.CustomButton
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/signu_button"
+                    android:layout_below="@+id/bottom_signu_button_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:text="SIGN UP"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_buttontxt"
+                    />
+
+            </RelativeLayout>
+
+
+            <!-- bottom line text -->
+            <RelativeLayout
+                android:id="@+id/bottom_sign_text_lay"
+                android:layout_below="@+id/signu_main1_inn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp"
+                >
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/bottom_signu_button_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account?"
+                    android:textColor="@color/white"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/font_size_16"
+                    />
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/bottom_signu_button_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Login."
+                    android:textColor="@color/deep_cyan"
+                    android:layout_toRightOf="@+id/bottom_signu_button_text1"
+                    android:textSize="@dimen/font_size_16"
+                    android:clickable="true"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
+
+
+

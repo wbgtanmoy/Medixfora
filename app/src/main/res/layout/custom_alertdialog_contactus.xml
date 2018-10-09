@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="Medixfora"
+            android:textColor="@android:color/black"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+
+        <View
+            android:id="@+id/txt_appname_underline"
+            android:layout_below="@+id/txt_appname"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/txt_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_appname_underline"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Choose an option to contact us."
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_main"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_email"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/button_color"
+                android:clickable="true"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_call"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/button_color"
+                android:clickable="true"
+                android:text="Call"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/button_color"
+                android:clickable="true"
+                android:text="More"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/delete_2" />
+
+</RelativeLayout>

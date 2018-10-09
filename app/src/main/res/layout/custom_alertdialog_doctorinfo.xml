@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:layout_margin="0dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_cyan_border"
+        android:layout_margin="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Bold.ttf"
+            android:id="@+id/txt_doctorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="doctor name"
+            android:textColor="@color/colorPrimaryDarkS"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal"/>
+
+        <View
+            android:id="@+id/txt_underline"
+            android:layout_below="@+id/txt_doctorname"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryS"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/doctor_image_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_underline"
+            >
+            <com.brandhype.medixfora.customviews.CircleImageView
+                android:id="@+id/doctor_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profilepic1"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:border_width="1dp"
+                app:border_color="@color/light_grey"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+           <!-- <LinearLayout
+                android:id="@+id/txt_doctorprice_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/doctor_image"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                >
+                <com.codopoliz.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/txt_doctorprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="0.00/-"
+                    android:textColor="@color/colorPrimaryS"
+                    android:textSize="@dimen/font_size_14"
+                    />
+                    <com.codopoliz.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/txt_doctorofferprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="0.00/-"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_size_14"
+                    />
+            </LinearLayout>-->
+
+        </RelativeLayout>
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/txt_doctorinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctor_image_ll"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:text="doctor info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="normal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_doctorinfo"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimaryS"
+                android:clickable="true"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

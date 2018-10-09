@@ -1,0 +1,299 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    tools:context="com.brandhype.medixfora.fragments.DoctorAppointmentFragment">
+
+    <!--<LinearLayout
+        android:id="@+id/docappt_search_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="0dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_white_border"
+        >
+
+        <com.codopoliz.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Bold.ttf"
+            android:id="@+id/docschedule_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="Appointment History"
+            android:textColor="@color/button_color"
+            android:textStyle="normal"
+            android:textSize="@dimen/font_size_16"
+            android:visibility="visible"
+            />
+
+        &lt;!&ndash; date &ndash;&gt;
+        <LinearLayout
+            android:id="@+id/postyourjob_date_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:weightSum="1"
+            >
+            <com.codopoliz.medixfora.customviews.CustomEditText
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/docappt_datefrom"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:hint="From Date"
+                android:inputType="text"
+                android:paddingBottom="15dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="0dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greydeep"
+                android:textSize="@dimen/font_size_edittxt"
+                android:text=""
+                android:background="@drawable/line_text"
+
+                />
+            <ImageView
+                android:id="@+id/docappt_datefrom_image"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/calender_cyan"
+                android:layout_centerVertical="true"
+                />
+
+            <com.codopoliz.medixfora.customviews.CustomEditText
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/docappt_dateto"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:hint="To Date"
+                android:inputType="text"
+                android:paddingBottom="15dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="0dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greydeep"
+                android:textSize="@dimen/font_size_edittxt"
+                android:text=""
+                android:background="@drawable/line_text"
+
+                />
+            <ImageView
+                android:id="@+id/docappt_dateto_image"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/calender_cyan"
+                android:layout_centerVertical="true"
+                />
+
+            &lt;!&ndash; submit &ndash;&gt;
+            <com.codopoliz.medixfora.customviews.CustomButton
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/doc_settings_button"
+                android:layout_width="0dp"
+                android:layout_weight=".14"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:padding="0dp"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                android:text="Go"
+                android:textStyle="normal"
+                android:textSize="@dimen/font_buttontxt"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+    </LinearLayout>-->
+
+
+
+    <LinearLayout
+        android:id="@+id/doctappt_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_white_border"
+        >
+
+        <com.brandhype.medixfora.customviews.CustomTextView
+            app:myfont="OpenSans_Regular.ttf"
+            android:id="@+id/doctappt_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:paddingBottom="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="Doctor's Appointment Schedule"
+            android:textColor="@color/button_color"
+            android:textStyle="normal"
+            android:textSize="@dimen/font_size_12"
+            android:visibility="visible"
+            />
+
+        <View
+            android:id="@+id/hSepa"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#cccccc"
+            android:visibility="visible" />
+        <!-- tabs -->
+
+        <HorizontalScrollView
+            android:id="@+id/doctappt_menu_half"
+            android:layout_below="@+id/hospital_details_top_half"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:scrollbars="none"
+            >
+
+        <RadioGroup
+            android:id="@+id/doctappt_details_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_today"
+                android:layout_width="@dimen/tabButtonWidth"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tabs"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:checked="true"
+                android:text="Todays Appointment"
+                android:textColor="@drawable/radio_text_selected"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/vSep1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#cccccc"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/rb_upcomming"
+                android:layout_width="@dimen/tabButtonWidth"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tabs"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="Upcomming Appointment"
+                android:textColor="@drawable/radio_text_selected"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/vSep2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#cccccc"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/rb_past"
+                android:layout_width="@dimen/tabButtonWidth"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tabs"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="Appoinment History"
+                android:textColor="@drawable/radio_text_selected"
+                android:textSize="12sp" />
+
+
+        </RadioGroup>
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/doctappt_mid"
+        android:layout_below="@+id/doctappt_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:padding="0dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/doctappt_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp" />
+
+        <ImageView
+            android:id="@+id/norecordfound_doctappt"
+            android:layout_below="@id/doctappt_List"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/norecordfound"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

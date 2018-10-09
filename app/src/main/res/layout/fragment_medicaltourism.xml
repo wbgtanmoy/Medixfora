@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brandhype.medixfora.fragments.MedicaltourismFragment"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/frame_medicaltour_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:id="@+id/medicaltour_top_img2"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/medical_tourism_baner"
+
+            />
+
+        <View
+            android:id="@+id/medicaltour_top_img2_line"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimaryDark"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/seek_main_scroll1"
+        android:layout_below="@+id/frame_medicaltour_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="10dp"
+        android:background="#00ffffff"
+        >
+
+        <LinearLayout
+            android:id="@+id/medicaltour_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            >
+
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/medicaltour_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHOOSE BY"
+                android:textColor="@color/dashboard_font"
+                android:textSize="@dimen/font_size_25"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/medicaltour_main_row"
+                android:layout_below="@+id/medicaltour_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="vertical"
+                >
+                <!-- rows1  -->
+                <LinearLayout
+                    android:id="@+id/medicaltour_row1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomButton
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/medicaltour_doctor_btn"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_corner_cyan_button"
+                        android:text="Select By Doctor"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_14"
+                        android:textAllCaps="false"
+                        />
+                </LinearLayout>
+                <!-- rows2  -->
+                <LinearLayout
+                    android:id="@+id/medicaltour_row2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <com.brandhype.medixfora.customviews.CustomButton
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/medicaltour_hospital_btn"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_corner_cyan_button"
+                        android:text="Select By Hospital"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_14"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+                <!-- rows3  -->
+                <LinearLayout
+                    android:id="@+id/medicaltour_row3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <com.brandhype.medixfora.customviews.CustomButton
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/medicaltour_treatment_btn"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_corner_cyan_button"
+                        android:text="Select By Treatment"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/font_size_14"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

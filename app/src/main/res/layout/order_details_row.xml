@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/orderItemDetails_outer_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    android:background="@color/transparent"
+    >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        card_view:contentPaddingTop="0dp"
+        card_view:contentPaddingBottom="0dp"
+        card_view:contentPaddingLeft="4dp"
+        card_view:contentPaddingRight="4dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/orderItemDetails_inner_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:id="@+id/item_image_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                >
+                <com.brandhype.medixfora.customviews.CircleImageView
+                    android:id="@+id/item_imageViewIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/no_image_cart"
+                    android:padding="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    app:border_width="1dp"
+                    app:border_color="@color/light_grey"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/orderItemDetails_divider_1"
+                android:layout_toRightOf="@+id/item_image_ll"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"/>
+
+
+            <LinearLayout
+                android:id="@+id/orderItemDetails_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/orderItemDetails_divider_1"
+                android:layout_toLeftOf="@+id/orderItemDetails_button"
+                android:paddingBottom="0dp"
+                android:paddingTop="1dp"
+                android:paddingLeft="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#ffffff"
+                    >
+                    <!--<com.codopoliz.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Bold.ttf"
+                        android:id="@+id/orderItemDetails_itemname_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        android:textColor="@color/greydeep"
+                        android:text="Item: "
+                        android:layout_gravity="center_vertical"
+                        />-->
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Bold.ttf"
+                        android:id="@+id/orderItemDetails_itemname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:text="Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. Crosin DS. "
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Bold.ttf"
+                        android:id="@+id/orderItemDetails_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        android:textColor="@color/greydeep"
+                        android:text="Price: "
+                        android:layout_centerVertical="true"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/orderItemDetails_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        android:textColor="@color/greydeep"
+                        android:text="Rs 75/-"
+                        android:layout_centerVertical="true"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Bold.ttf"
+                        android:id="@+id/orderItemDetails_total_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        android:textColor="@color/greydeep"
+                        android:text="Total: "
+                        android:layout_centerVertical="true"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/orderItemDetails_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:textSize="@dimen/font_size_12"
+                        android:textStyle="normal"
+                        android:textColor="@color/greydeep"
+                        android:text="Rs 150/-"
+                        android:layout_centerVertical="true"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/orderItemDetails_divider"
+                android:layout_toRightOf="@+id/orderItemDetails_details"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="0dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"/>
+
+
+            <LinearLayout
+                android:id="@+id/orderItemDetails_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                >
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/orderItemDetails_qty_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="@color/bottle_green"
+                    android:background="@color/white"
+                    android:text="Quantity"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+
+                    />
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/orderItemDetails_qty"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:text="2"
+                    android:textStyle="normal"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

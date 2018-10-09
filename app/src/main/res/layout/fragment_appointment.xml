@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.brandhype.medixfora.fragments.AppointmentFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        >
+
+    <LinearLayout
+        android:id="@+id/doctor_appt_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+
+        >
+
+        <!-- top layout -->
+        <LinearLayout
+            android:id="@+id/doctor_appt_toplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/pschyback"
+            android:gravity="center"
+            >
+
+            <com.brandhype.medixfora.customviews.CircleImageView
+                android:id="@+id/doctor_appt_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profilepic1"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:layout_marginTop="8dp"
+                app:border_width="2dp"
+                app:border_color="#bcbcbc"
+                />
+
+            <TextView
+                android:id="@+id/doctor_appt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Dr Sundeep Khurana"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/doctor_appt_desig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:text="BDS, Dentist"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:id="@+id/doctor_appt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:text="Satya Niketan, Delhi"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                />
+
+            <!-- rates -->
+            <LinearLayout
+                android:id="@+id/doctor_appt_fees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/personal_appt2"
+                    android:layout_marginLeft="1dp"
+                    />
+                <TextView
+                    android:id="@+id/txtPhy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="1200/-"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/call_appt2"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtcall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="500/-"
+                    />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/video_appt2"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtvid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="800/-"
+                    />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/chat_appt2"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtchat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="400/-"
+                    />
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/free_appt2"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtfree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="free"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- bottom layout -->
+        <LinearLayout
+            android:id="@+id/doctor_appt_botlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            >
+            <!--<TextView
+                android:id="@+id/doctor_apptx_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/font_size_14"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="xxxxxxxxxxxxxxxxxxxx"
+                />-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey2"
+                android:elevation="1dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="2dp"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabSelectedTextColor="@color/button_color"
+                app:tabTextColor="#bcbcbc"
+                />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:layout_below="@id/tab_layout"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

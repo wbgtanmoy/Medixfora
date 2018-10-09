@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brandhype.medixfora.fragments.PharmacyFragment"
+    android:background="#ffffff"
+    >
+
+    <LinearLayout
+        android:id="@+id/frame_pharmacy_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:id="@+id/pharmacy_top_img2"
+            android:layout_height="160dp"
+            android:layout_width="match_parent"
+            android:src="@drawable/banner_seeksec"
+            android:scaleType="fitXY"
+
+            />
+        <View
+            android:id="@+id/pharmacy_top_img2_line"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimaryDark"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/seek_main_scroll1"
+        android:layout_below="@+id/frame_pharmacy_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="10dp"
+        android:background="#00ffffff"
+        >
+        <LinearLayout
+            android:id="@+id/pharmacy_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:id="@+id/pharmacy_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHOOSE \n YOUR MEDICINE BY"
+                android:textColor="@color/button_color"
+                android:textSize="@dimen/font_size_25"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+
+            <!-- row  -->
+            <LinearLayout
+                android:id="@+id/pharmacy_row1"
+                android:layout_below="@+id/pharmacy_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <LinearLayout
+                    android:id="@+id/pharmacy_row2_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/pharmacy_row2_img_l"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/speciality"
+                        />
+                    <TextView
+                        android:id="@+id/pharmacy_row2_txt_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="@color/button_color"
+                        android:textSize="@dimen/font_size_16"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pharmacy_row2_right"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/pharmacy_row2_img_2"
+                        android:layout_width="@dimen/dasboard_icon1"
+                        android:layout_height="@dimen/dasboard_icon1"
+                        android:padding="5dp"
+                        android:src="@drawable/hospital"
+                        />
+                    <TextView
+                        android:id="@+id/pharmacy_row2_txt_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company"
+                        android:textColor="@color/button_color"
+                        android:textSize="@dimen/font_size_16"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

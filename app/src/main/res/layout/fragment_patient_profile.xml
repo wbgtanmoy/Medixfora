@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brandhype.medixfora.fragments.DoctorEditprofileFragment"
+    android:background="#bcbcbc"
+    >
+
+    <ScrollView
+        android:id="@+id/patient_prof_main_scroll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin1"
+            android:layout_marginRight="@dimen/common_margin1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="40dp"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pschyback"
+                >
+                <com.brandhype.medixfora.customviews.CircleImageView
+                    android:id="@+id/patient_prof_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/profilepic1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:layout_marginTop="5dp"
+                    app:border_width="2dp"
+                    app:border_color="#bcbcbc"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Bold.ttf"
+                    android:id="@+id/patient_prof_name"
+                    android:layout_below="@+id/patient_prof_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:hint="Title"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp"
+                    android:text="Mr"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_white_border"
+                >
+
+                <ImageView
+                    android:id="@+id/patient_profile_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/edit_icon"
+                    android:visibility="visible" />
+
+
+
+                <!--  address -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_address_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="10dp"
+                    >
+
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_address_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_address"
+                        android:layout_below="@+id/patient_address_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Address"
+                        android:inputType="textCapSentences"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+                <!--  country -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_country_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_country_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_country"
+                        android:layout_below="@+id/patient_country_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Country"
+                        android:inputType="textCapSentences"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+
+                <!--  citytown -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_citytown_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_citytown_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City/Town"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_citytown"
+                        android:layout_below="@+id/patient_citytown_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="City/Town"
+                        android:inputType="textCapSentences"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+                <!-- postcode -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_postcode_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_postcode_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Postal Code"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_postcode"
+                        android:layout_below="@+id/patient_postcode_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Postcode"
+                        android:inputType="number"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+                <!--  contact -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_contact_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_contact_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_contact"
+                        android:layout_below="@+id/patient_contact_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Contact"
+                        android:inputType="number"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+                <!--  email -->
+                <RelativeLayout
+                    android:id="@+id/patient_prof_email_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_email_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/button_color"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_prof_email"
+                        android:layout_below="@+id/patient_email_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/greydeep"
+                        android:textSize="@dimen/font_size_12"
+                        android:text=""
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+                <!-- submit -->
+                <com.brandhype.medixfora.customviews.CustomButton
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/patient_prof_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:text="Edit"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_buttontxt"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

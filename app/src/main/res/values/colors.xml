@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02a6af</color>
+    <color name="colorPrimaryDark">#00838c</color>
+    <color name="colorAccent">#00a0cc</color>
+
+    <color name="colorPrimaryS">#02a6af</color>
+    <color name="colorPrimaryDarkS">#00838c</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#cc0000</color>
+    <color name="brown">#990000</color>
+    <color name="bottle_green">#009900</color>
+    <color name="orange">#ff9900</color>
+
+    <color name="blue">#0000ff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="dark_grey">#888888</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="greydeep">#666666</color>
+    <color name="grey">#bcbcbc</color>
+    <color name="grey2">#dcdcdc</color>
+    <color name="grey3">#EAEAEA</color>
+
+    <color name="tab_underline_color">#00ffff</color>
+
+    <color name="primary_header_color">#1BBFEF</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="edittext_line">#02a6af</color>
+    <color name="edittext_hint">#666666</color>
+    <color name="button_color">#02a6af</color>
+    <color name="fees_color">#02a6af</color>
+
+    <color name="deep_cyan">#33ccff</color>
+    <color name="cyan">#00cccc</color>
+    <color name="dashboard_font">#03446c</color>
+
+    <color name="tab_unselected_text_color">#bcbcbc</color>
+    <color name="tab_selected_text_color">#02a6af</color>
+
+
+
+    <color name="black_2">#242424</color>
+    <color name="dates_default_text_color">#A9A9A9</color>
+    <color name="calender_border_color">#DEDEDE</color>
+    <color name="event_circle_color">#ff8533</color>
+
+</resources>

@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#bcbcbc"
+    tools:context="com.brandhype.medixfora.fragments.ContactUsFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_contactus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/scroll_contactus_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_white_border"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="20dp"
+            >
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/label_contactus"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="16dp"
+                android:text="Medixfora Healthcare Concepts and Solutions Pvt. Ltd."
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/contact_us_company"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                />
+
+            <com.brandhype.medixfora.customviews.CustomTextView
+                app:myfont="OpenSans_Regular.ttf"
+                android:id="@+id/contact_us"
+                android:layout_centerInParent="true"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="left|top"
+                android:gravity="left"
+                android:text="We are a mutimillion workforce in medical industry." />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <!-- header -->
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_img_menu"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        >
+
+
+
+        <RelativeLayout
+            android:id="@+id/nav_header_img_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorPrimary"
+            >
+                <com.brandhype.medixfora.customviews.CircleImageView
+                android:id="@+id/doctor_profile_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/navbar_image"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                app:border_color="@android:color/transparent"
+                app:border_width="2dp" />
+
+                <ImageView
+                android:id="@+id/company_logo"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo_medix1"
+                android:scaleType="fitCenter"
+                android:layout_toRightOf="@+id/doctor_profile_pic"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="5dp"
+                />
+
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joe Stiphens"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_below="@+id/nav_header_img_container"
+            android:textSize="@dimen/font_size_16"
+            android:padding="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/txt_eml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="joestipehens@gmail.com"
+            android:textColor="@color/white"
+            android:layout_below="@+id/txt_name"
+            android:textSize="@dimen/font_size_14"
+            android:padding="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentLeft="true"
+            />
+    </RelativeLayout>
+
+
+    <!-- menu -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="15dp" />
+
+
+</RelativeLayout>

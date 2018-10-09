@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">Medixfora</string>
+
+    <string name="title_activity_splash">Medixfora</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="prescription_note">Note : A valid prescription to be uploaded with full hospital/doctor name
+and patient name with doctor signtaure</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="otp_account_activate_success">"Congrats!  Your Account is Activated. Please login with your email/password."</string>
+    <string name="otp_account_activation_process">"Thank you for registering."</string>
+
+
+    <string name="dashboard">Medixfora</string>
+    <string name="aboutus">About Us</string>
+    <string name="myprofile">My Profile</string>
+    <string name="myorder">My Order</string>
+    <string name="myrequest">My Request</string>
+    <string name="contactus">Contact Us</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="diagonistic">Diagonistic</string>
+    <string name="diagonistics">Lab Testing</string>
+    <string name="careathome">Care At Home</string>
+    <string name="seeksecondoption">Seek Second Option</string>
+    <string name="cart">My Cart</string>
+    <string name="prescription">Rx Medicine</string>
+    <string name="seeksecondopinion">Seek Second Opinion</string>
+    <string name="speciality">Speciality</string>
+    <string name="doctor_list">Doctor List</string>
+    <string name="appointment">Appointment</string>
+    <string name="schedule">Schedule</string>
+    <string name="settings">Settings</string>
+
+
+    <!-- navigation drawer item labels  patient -->
+    <string-array name="nav_drawer_labels">
+        <!--  section 1 -->
+        <item>@string/dashboard</item>
+        <item>@string/aboutus</item>
+        <item>@string/myprofile</item>
+        <item>@string/myorder</item>
+        <item>E-Prescriptions</item>
+        <item>@string/myrequest</item>
+        <!--<item>My Report/Uploads</item>-->
+        <item>My Appointment</item>
+        <item>@string/contactus</item>
+        <!--  section 2  -->
+        <item>@string/pharmacy</item>
+        <item>@string/seeksecondopinion</item>
+        <item>Diagonistic Services</item>
+        <item>Care At Home</item>
+        <item>Queries/ Health Tips</item>
+        <item>Medical Tourism</item>
+        <!--  section 3  -->
+        <item>Logout</item>
+        <item>Settings</item>
+        <item>Feedback</item>
+        <item>Terms &amp; Policies</item>
+        <item>Company Profile</item>
+    </string-array>
+
+    <!-- navigation drawer item labels doctor -->
+    <string-array name="nav_drawer_labels_doctor">
+        <item>@string/dashboard</item>
+        <item>@string/myprofile</item>
+        <item>@string/schedule</item>
+        <item>@string/appointment</item>
+        <item>@string/settings</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+
+    <string name="title_dashboard">Medixfora</string>
+    <string name="title_aboutus">About Us</string>
+    <string name="title_myprofile">My Profile</string>
+    <string name="title_myprescription">E-Prescriptions</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_medicaltourism">Medical Tourism</string>
+    <string name="title_healthtips">Queries/Health Tips</string>
+    <string name="title_cart">My Cart</string>
+    <string name="title_pharmacy">Pharmacy</string>
+    <string name="title_seeksecondopinion">Seek Second Opinion</string>
+    <string name="title_diagonistic">Diagonistic</string>
+    <string name="title_careathome">Care At Home</string>
+    <string name="title_queries">Queries/ Health Tips</string>
+    <string name="title_medicaltour">Medical Tourism</string>
+    <string name="title_patient_appointment">My Appointments</string>
+    <string name="title_order">My Orders</string>
+
+    <string name="title_docprofile">Profile</string>
+    <string name="title_edit_docprofile">Edit Profile</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_appointment">Appointments</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_contactus">Contact Us</string>
+    <string name="title_feedback">Feedback</string>
+    <string name="title_terms">Terms &amp; Policies </string>
+
+    <string name="title_edit_speciality">Doctor Speciality</string>
+    <string name="title_edit_hospital">Doctor Hospitals</string>
+    <string name="title_query_reply">Unread Notifications</string>
+    <string name="title_myrequest">My Requests</string>
+    <string name="title_reschedule">Reschedule Appointment</string>
+    <string name="title_order_details">Order Details</string>
+    <string name="title_company_profile">Company Profile</string>
+    <string name="title_askme">Ask Me Anything</string>
+
+
+    <string name="title_activity_banner">BannerActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_signup">SignupActivity</string>
+
+    <string name="appointment_type_prompt">Choose Appointment Type</string>
+    <string-array name="appointment_types_arrays">
+        <item>Physical Appt.</item>
+        <item>Through Call</item>
+        <item>Through Email</item>
+        <item>Through Video</item>
+        <item>Through Chat</item>
+    </string-array>
+
+
+    <string name="speciality_prompt">Choose Speciality</string>
+    <string-array name="speciality">
+        <item>Select Speciality</item>
+        <item>Acupuncher</item>
+        <item>Anaesthesia</item>
+        <item>Ayurvedic</item>
+        <item>Biochemistry</item>
+        <item>Cardiology</item>
+        <item>Chest Medicine</item>
+    </string-array>
+
+
+    <string name="speciality_hospital">Choose Speciality</string>
+    <string-array name="hospitals">
+        <item>Select Hospitals</item>
+        <item>Ganga Ram Hospital</item>
+        <item>Max Superspecality</item>
+        <item>Wookhard</item>
+        <item>Bell Vue</item>
+    </string-array>
+
+
+    <dimen name="tabButtonWidth">145dp</dimen>
+
+    <string name="doctsetingtxt">Please use letters, special characters and numbers for a strong password. Both password and confirm password should match.</string>
+
+    <string name="terms">By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. We are offering you this app to use for your own personal use without cost, but you should be aware that you cannot send it on to anyone else, and you’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Medixfora.</string>
+    <string name="title_activity_banner_new">BannerActivityNew</string>
+
+    <!-- ask me anything -->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone No.</string>
+    <string name="message">Message</string>
+    <string name="head">Please fill up the form below. Our  admin will contact you soon.</string>
+
+
+    <string name="setting_main_txt">Change your password here. Your password should be 6 character long. Please use alphabets and number both for better security.</string>
+
+
+</resources>

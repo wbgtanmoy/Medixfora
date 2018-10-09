@@ -1,0 +1,60 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_doctor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_toolbar_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar_doctor"
+                layout="@layout/toolbar" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container_body_doctor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fcfcfc"
+            >
+                <!--<android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="8dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_anchor="@id/toolbar"
+                app:layout_anchorGravity="top|left|start"
+                app:fabSize="mini"
+                app:borderWidth="0dp"
+                />-->
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer_doctor"
+        android:name="com.brandhype.medixfora.fragments.FragmentDrawerDoctor"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

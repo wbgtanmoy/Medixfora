@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ScrollView
+        android:id="@+id/patient_settings_main_scroll1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin1"
+            android:layout_marginRight="@dimen/common_margin1"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_white_border"
+                >
+
+                <com.brandhype.medixfora.customviews.CustomTextView
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/patient_settings_main_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_main_txt"
+                    android:textColor="@color/black"
+                    android:background="#ffffff"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="7dp"
+                    android:visibility="visible"
+                    />
+
+                <!--  old password -->
+                <RelativeLayout
+                    android:id="@+id/patient_settings_oldpass_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="10dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_oldpass_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Password"
+                        android:textColor="@color/black"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_oldpass_edt"
+                        android:layout_below="@+id/patient_oldpass_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+                <!--  new password -->
+                <RelativeLayout
+                    android:id="@+id/patient_settings_newpass_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_newpass_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="New Password"
+                        android:textColor="@color/black"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_newpass_edt"
+                        android:layout_below="@+id/patient_newpass_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+
+                <!--  retype password -->
+                <RelativeLayout
+                    android:id="@+id/patient_setting_newpass2_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="5dp"
+                    >
+                    <com.brandhype.medixfora.customviews.CustomTextView
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_newpass_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Retype Password"
+                        android:textColor="@color/black"
+                        android:background="#ffffff"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="7dp"
+                        android:visibility="visible"
+                        />
+                    <com.brandhype.medixfora.customviews.CustomEditText
+                        app:myfont="OpenSans_Regular.ttf"
+                        android:id="@+id/patient_newpass_edt2"
+                        android:layout_below="@+id/patient_newpass_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:hint=""
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/edittext_hint"
+                        android:textSize="@dimen/font_size_edittxt"
+                        android:background="@drawable/line_black"
+                        />
+                </RelativeLayout>
+
+
+
+                <!-- submit -->
+                <com.brandhype.medixfora.customviews.CustomButton
+                    app:myfont="OpenSans_Regular.ttf"
+                    android:id="@+id/patient_settings_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/rounded_corner_cyan_button"
+                    android:text="Update"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/font_buttontxt"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
