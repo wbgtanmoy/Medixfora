@@ -23,7 +23,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         //sendRegistrationToServer(refreshedToken);
 
         //--------------- Store FCM ID used during registration -------------------------
-        //--------------
+        //---------------------------------------------------------------------------
         AppPreferences pref = new AppPreferences(this);
         pref.SavePreferences(AppPreferences.Storage.DEVICE_FCMID.name(),refreshedToken);
         //---------the FCM ID is being sent to the server during login process------------
